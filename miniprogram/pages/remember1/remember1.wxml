@@ -1,0 +1,18 @@
+<!--pages/remember1/remember1.wxml-->
+<view class="co">
+<view class="cet">
+  <view class="wordPart">
+    <view class="word">{{english}}</view>
+    <view class="soundmark">
+           <view class = "symble" bindtap='read'>| {{symble}} |</view>
+    </view>
+  </view>
+  <view wx:if = "{{show}}" class = "chineses">{{chinese}}</view>
+</view>
+<view class="btns">
+    <button class = "button miss" catchtap='show' wx:if='{{!show}}'>不认识</button>
+    <button class = "button miss" wx:if='{{show}}'>已加入生词本</button>
+    <button class = "button next" catchtap='next'>下一个</button>
+    <button class = "button back" catchtap='back'>返回首页</button>
+</view>
+</view>

@@ -1,0 +1,126 @@
+/* pages/seek/seek.wxss */
+.section_campus{
+  display: flex;
+  flex-direction: row;
+  height: 75rpx;
+  align-items: center;
+  justify-content:left;
+  padding: 5rpx;
+  /* background: rgb(23, 163, 81); */
+}
+.section_campus_contain{
+  display: flex;
+  flex-direction: row;
+  height: 75rpx;
+  border: black;
+  align-items: center;
+  
+}
+.picker{
+  width: 200rpx;
+  height: 50rpx;
+  background-color: #90d7ec;
+  border-radius: 5px;
+  border-color: black;
+  border: 1px ;
+  text-align: center;
+  line-height: 50rpx;
+  text-decoration: underline;
+}
+
+.getDay{
+  display: flex;
+  flex-direction: row;
+}
+.getDay_day{
+  display: flex;
+  flex-direction: row;
+}
+.header_view_hide{
+  display: none;
+}
+
+.header_view_show{
+  display: block;
+  text-align: center;
+  height: 60rpx;
+  align-items: center;
+  justify-content:center;
+  /* background-color: rgb(182, 182, 209); */
+}
+
+.building0{
+  background-color: rgba(139,210,155);
+  margin: 10rpx;
+  height: 60rpx;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  line-height: 60rpx;
+}
+
+.building1{
+  background-color: rgb(247, 244, 187);
+  margin: 10rpx;
+  height: 60rpx;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  line-height: 60rpx;
+}
+
+.building2{
+  background-color: rgb(17, 197, 233);
+  margin: 10rpx;
+  height: 60rpx;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  line-height: 60rpx;
+}
+
+.classroom{
+  background-color: rgba(232, 232, 232); 
+  width: 25%;
+  margin: 10rpx;
+  height: 60rpx;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  line-height: 60rpx;
+}
+.submitButton{
+  /* background-color:  #90d7ec; */
+  background-color: burlywood;
+  color: white;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  height: 75rpx;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  line-height: 75rpx;
+}
+  
+
+.blockBox{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(29, 182, 75);
+}
+
+.classroomContain{
+  display: flex;
+  flex-direction: row;
+}
+
+.down{
+  text-align: center;
+}
+
+
+.divLine{
+  background: #E0E3DA;
+  width: 100%;
+  height: 5rpx;
+ }

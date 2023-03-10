@@ -1,0 +1,46 @@
+/* pages/home/home.wxss */
+swiper{
+  height: 400rpx;
+  padding: 40rpx;
+}
+
+swiper image{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+}
+.empty{
+  padding: 50rpx;
+  display: flex;
+  flex-direction: column;
+  height: 200rpx;
+  width: 200rpx;
+  border: red;
+  border: 2rpx;
+  max-width: 200rpx;
+}
+.remember{
+  padding: 50rpx;
+  display: flex;
+  flex-direction: column;
+  height: 200rpx;
+  width: 200rpx;
+}
+.signal1{
+  width: 200rpx;
+  height: 160rpx;
+}
+.model1{
+  width: 200rpx;
+  height: 40rpx;
+  text-align: center;
+}
+.co{
+  border-radius: 2em;
+  width: 100%;
+  height: 500rpx;
+  background-color: rgb(25, 199, 230);
+}

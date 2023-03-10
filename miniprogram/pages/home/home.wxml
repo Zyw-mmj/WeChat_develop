@@ -1,0 +1,25 @@
+<!--pages/home/home.wxml-->
+<view class="co">
+<swiper indicator-dots="true" circular="true" autoplay="true" >
+  <swiper-item >
+    <image src="../../image/picture1.png"></image>
+  </swiper-item>
+  <swiper-item >
+    <image src="../../image/picture2.png"></image>
+  </swiper-item>
+  <swiper-item >
+    <image src="../../image/picture3.png"></image>
+  </swiper-item>
+</swiper>
+</view>
+<view class="container" >
+  <view class="empty" bindtap="goSeek">
+    <image src="../../image/room.png" class="signal1"></image>
+    <text class="model1" bindtap="goSeek">查询空教室</text>
+  </view>
+  <view class="remember" bindtap="goRemember">
+  <image src="../../image/sun.png" class="signal1"></image>
+  <text class="model1" >记单词</text>
+  </view>
+
+</view>

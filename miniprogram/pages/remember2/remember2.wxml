@@ -1,0 +1,17 @@
+<!--pages/remember2/remember2.wxml-->
+<view class="co">
+<view class="cet">
+  <view class="wordPart">
+    <view class="word">{{english}}</view>
+    <view class="soundmark">
+           <view class = "symble" bindtap='read'>|{{symble}}|</view>
+        </view>
+  </view>
+  <view class = "chineses">{{chinese}}</view>
+</view>
+<view class="btns">
+    <button data-val="{{id}}" data-cate="{{cate}}" bindtap="remove">认识</button>
+
+    <button class = "button back" catchtap='back'>返回</button>
+</view>
+</view>

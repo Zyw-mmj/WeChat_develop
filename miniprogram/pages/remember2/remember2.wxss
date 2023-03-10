@@ -1,0 +1,25 @@
+.co{
+  background-color: #cdf094;
+  width: 100%;
+  height: 100vh;
+}
+.cet{
+  width: 100%;
+  height: 700rpx;
+}
+.wordPart{
+  width: 100%;
+  height: 500rpx;
+}
+.word{
+  height: 400rpx;
+  text-align: center;
+  line-height: 400rpx;
+  font-size: 100rpx;
+}
+.symble{
+  text-align: center;
+}
+.chineses{
+  text-align: center;
+}

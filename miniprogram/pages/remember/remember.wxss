@@ -1,0 +1,126 @@
+/* pages/remember/remember.wxss */
+.tab-item.active {
+  color: #c25b5b;
+  border-bottom-color: #c25b5b;
+  width: 33%;
+  text-align: center;
+  height: 95rpx;
+}
+
+.tab-item {
+  width: 33%;
+  text-align: center;
+}
+
+.content{
+  background-color: burlywood;
+}
+swiper{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color:#efd0b1;
+  top: 0;
+  bottom: 100rpx;
+}
+
+swiper-item{
+  display: flex;
+  flex-direction: row;
+}
+.bottom{
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  line-height: 100rpx;
+  bottom: 0;
+  background-color: rgb(243, 243, 243);
+}
+.neirong{
+  background-color: black;
+}
+
+.list-item1{
+  height: 500rpx;
+  width: 50%;
+}
+.list-contain{
+  padding: 30rpx;
+  height: 400rpx;
+  width: 80%;
+}
+.picture{
+  border-radius: 1em;
+  width: 100%;
+  height: 100%;
+}
+.picturetext{
+  text-align: center;
+}
+.errorword{
+  height: 60rpx;
+  padding: 20rpx;
+  line-height: 60rpx;
+}
+.divLine{
+  background: #d8f59e;
+  width: 100%;
+  height: 5rpx;
+ }
+
+ .shurukuang{
+   height: 200rpx;
+   display: flex;
+   flex-direction: row;
+ }
+
+ .shurukuang1{
+   height: 90rpx;
+   margin: 30rpx;
+   border-radius: 0.5em;
+   background-color: #dbe4e3;
+   display: flex;
+   flex-direction: row;
+ }
+ .sousuotupian{
+   height: 90rpx;
+   width: 90rpx;
+ }
+.input1{
+  height: 90rpx;
+  width: 450rpx;
+}
+.shuruButton{
+  padding: 30rpx;
+  height: 120rpx;
+}
+.trans{
+  margin: 30rpx;
+  height: 100rpx;
+  border-radius: 0.5em;
+  background-color: #d3f5f1;
+  text-align: left;
+  line-height: 100rpx;
+  
+}
+.pppp{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.aaa{
+  font-size: 70rpx;
+  font-style:italic;
+}
+.bbb{
+  font-size: 40rpx;
+}
+
+
+

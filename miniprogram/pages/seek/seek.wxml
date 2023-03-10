@@ -1,0 +1,94 @@
+<!--pages/seek/seek.wxml-->
+
+<form bindsubmit="formSubmit">
+  <view class="section_campus">
+    <view class="section_campus_contain">校区：</view>
+    <picker  bindchange="bindPickerChange" value="{{remenberCampus}}" range="{{array}}"  name="campusChoose" >
+      <view class="picker" >{{array[index]}}</view>
+    </picker>
+  </view>
+  <view class="section_campus">
+        <view >日期：</view>
+        <view >
+          <radio-group class="getDay_day" bindchange="radioChange" name = "dayChoose">
+            <label>
+              <radio value="0" checked />今天</label>
+            <label>
+              <radio value="1"/>明天 </label>
+            <label>
+              <radio value="2" />后天 </label>
+          </radio-group>          
+        </view>
+  </view>
+  <view class="section_campus">
+        <view >时段：</view>
+        <view >
+          <radio-group class="getDay_day" bindchange="radioChange" name="timeChoose">
+            <label>
+              <radio value="全天" checked/>全天</label>
+            <label>
+              <radio value="上午" />上午</label>
+            <label>
+              <radio value="下午" />下午</label>
+            <label>
+              <radio value="晚上" />晚上</label>
+          </radio-group>          
+        </view>
+  </view>
+  <button form-type="submit" class="submitButton">查询空教室</button>
+</form>
+
+<view class="{{ifChoose?'header_view_show':'header_view_hide'}}">你所查询的日期为：{{nowDate}},{{timeChoose}}</view>
+<view class="{{ifChoose?'header_view_show':'header_view_hide'}}" class="divLine"></view>
+
+
+<block style="background-color: blue;">
+  <view wx:if="{{timeChoose=='全天'}}" wx:for="{{allDayData}}" wx:for-item="item" wx:key="index">
+    <view class="building0" wx:if="{{item.a=='1'&& item.b!='到底了~'}}">{{item.b}}</view>
+    
+    <view class="classroomContain" wx:if="{{item.a!='1' && item.d!='0'}}">
+      <view class="classroom" >{{item.a}}</view>
+      <view class="classroom" >{{item.b}}</view>
+      <view class="classroom" >{{item.c}}</view>
+      <view class="classroom" >{{item.d}}</view>
+    </view>
+  </view>
+
+  <view wx:if="{{timeChoose=='上午'}}" wx:for="{{amData}}" wx:for-item="item" wx:key="index">
+    <view class="building0" wx:if="{{item.a=='1'&& item.b!='到底了~'&& item.c=='0'}}">{{item.b}}</view>
+    <view class="building1" wx:if="{{item.a=='1'&& item.b!='到底了~'&& item.c=='1'}}">{{item.b}}</view>
+    <view class="building2" wx:if="{{item.a=='1'&& item.b!='到底了~'&& item.c=='2'}}">{{item.b}}</view>
+    <view class="classroomContain" wx:if="{{item.a!='1' && item.d!='1'}}">
+      <view class="classroom" >{{item.a}}</view>
+      <view class="classroom" >{{item.b}}</view>
+      <view class="classroom" >{{item.c}}</view>
+      <view class="classroom" >{{item.d}}</view>
+    </view>
+  </view>
+
+  <view wx:if="{{timeChoose=='下午'}}" wx:for="{{pmData}}" wx:for-item="item" wx:key="index">
+    <view class="building0" wx:if="{{item.a=='1'&& item.b!='到底了~'&& item.c=='0'}}">{{item.b}}</view>
+    <view class="building1" wx:if="{{item.a=='1'&& item.b!='到底了~'&& item.c=='1'}}">{{item.b}}</view>
+    <view class="building2" wx:if="{{item.a=='1'&& item.b!='到底了~'&& item.c=='2'}}">{{item.b}}</view>
+    <view class="classroomContain" wx:if="{{item.a!='1' && item.d!='2'}}">
+      <view class="classroom">{{item.a}}</view>
+      <view class="classroom" >{{item.b}}</view>
+      <view class="classroom" >{{item.c}}</view>
+      <view class="classroom" >{{item.d}}</view>
+    </view>
+  </view>
+  <view wx:if="{{timeChoose=='晚上'}}" wx:for="{{eveData}}" wx:for-item="item" wx:key="index">
+    <view class="building0" wx:if="{{item.a=='1'&& item.b!='到底了~'}}">{{item.b}}</view>
+    <view class="classroomContain" wx:if="{{item.a!='1' && item.d!='3'}}">
+      <view class="classroom" >{{item.a}}</view>
+      <view class="classroom" >{{item.b}}</view>
+      <view class="classroom" >{{item.c}}</view>
+      <view class="classroom" >{{item.d}}</view>
+    </view>
+    <!-- <view class="down" wx:if="{{item.a=='1'&& item.b=='到底了~'}}">{{item.b}}</view> -->
+  </view>
+</block>
+
+
+
+

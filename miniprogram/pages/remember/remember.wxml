@@ -1,0 +1,68 @@
+<view class="content">
+  
+  <swiper current="{{item}}" bindchange="changeTab" duration="200" class="swipercss" >
+  <swiper-item>
+    <view class="list-item1" catchtap="clickFirst">
+      <view class="list-contain">
+        <image src="../../image/four.png" class="picture"></image>
+        <view class="picturetext">四级单词</view>
+      </view>
+    </view>
+    <view class="list-item1" catchtap="clickScond">
+      <view class="list-contain">
+        <image src="../../image/4T.png" class="picture"></image>
+        <view class="picturetext">六级单词</view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item > 
+    <scroll-view class="content-disbook" scroll-y>
+      <view wx:for="{{DataList}}" wx:key="_id">
+        <view class="errorword">  
+          <view data-val="{{item.id}}" data-cate="{{item.category}}" bindtap="transfer">{{item.English}}  | {{item.symble}} |</view>
+          <view class="divLine"></view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+  <view class="beidanci">
+  <form bindsubmit="shurudanci" >
+    <view class="shurukuang">
+      <view class="shurukuang1">
+      <image src="../../image/sousuo.png" class="sousuotupian"></image>
+      <input class="input1" placeholder="请输入要查询的单词" placeholder-class="input1-place" type="text" name="danci" >
+      </input>
+      </view>
+     
+      <button form-type="submit" class="shuruButton">查询</button>
+    </view>
+  </form>
+    <view wx:if="{{transfail=='b'}}">
+    <view wx:if="{{temp==1}}" class="trans">
+          <view wx:if="{{q!=tran}}" class="pppp">
+          <view class="aaa">{{q}}</view>
+          <view>  </view>
+          <view class="bbb">{{tran}}</view>
+          </view>
+          <viwe wx:if="{{q==tran}}">sorry~未搜索到该单词</viwe>
+    </view>
+    </view>
+  </view>
+  </swiper-item>
+  </swiper>
+
+  <view class="bottom">
+    <view class="tab-item {{tab==0?'active':''}}" bindtap="changeItem" data-item="0">单词学习
+    </view>
+    <view class="tab-item {{tab==1?'active':''}}" bindtap="changeItem"
+    data-item="1">生词本</view>
+    <view class="tab-item {{tab==2?'active':''}}" bindtap="changeItem"
+    data-item="2">查词义</view>
+  </view>
+</view>
+
+
+
+
+
